@@ -1,9 +1,8 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid2 from '@mui/material/Grid2';
 import Pagination from '@mui/material/Pagination';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
@@ -136,7 +135,7 @@ const TitleTypography = styled(Typography)(({ theme }) => ({
   },
 }));
 
-function Author({ authors }) {
+function Author({ authors }: { authors: { name: string; avatar: string }[] }) {
   return (
     <Box
       sx={{
@@ -169,19 +168,12 @@ function Author({ authors }) {
   );
 }
 
-Author.propTypes = {
-  authors: PropTypes.arrayOf(
-    PropTypes.shape({
-      avatar: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};
-
 export default function Latest() {
-  const [focusedCardIndex, setFocusedCardIndex] = React.useState(null);
+  const [focusedCardIndex, setFocusedCardIndex] = React.useState<number | null>(
+    null,
+  );
 
-  const handleFocus = (index) => {
+  const handleFocus = (index: number) => {
     setFocusedCardIndex(index);
   };
 
@@ -194,9 +186,9 @@ export default function Latest() {
       <Typography variant="h2" gutterBottom>
         Latest
       </Typography>
-      <Grid container spacing={8} columns={12} sx={{ my: 4 }}>
+      <Grid2 container spacing={8} columns={12} sx={{ my: 4 }}>
         {articleInfo.map((article, index) => (
-          <Grid key={index} size={{ xs: 12, sm: 6 }}>
+          <Grid2 key={index} size={{ xs: 12, sm: 6 }}>
             <Box
               sx={{
                 display: 'flex',
@@ -229,9 +221,9 @@ export default function Latest() {
 
               <Author authors={article.authors} />
             </Box>
-          </Grid>
+          </Grid2>
         ))}
-      </Grid>
+      </Grid2>
       <Box sx={{ display: 'flex', flexDirection: 'row', pt: 4 }}>
         <Pagination hidePrevButton hideNextButton count={10} boundaryCount={10} />
       </Box>
