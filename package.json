@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "publish": "aws s3 cp /home/dev/Documents/aliph/ s3://aliph --recursive && aws cloudfront create-invalidation --distribution-id E23TAN5OBHHNGU --paths \"/*\""
+    "publish": "aws s3 cp /home/dev/Documents/aliph/dist s3://aliph --recursive && aws cloudfront create-invalidation --distribution-id E23TAN5OBHHNGU --paths \"/*\""
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

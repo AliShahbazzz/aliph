@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { Category, Home } from "./pages";
 import Blog from "./pages/blog/Blog";
+import type {} from '@mui/material/themeCssVarsAugmentation';
 
 export const App: React.FC = () => {
   return (
