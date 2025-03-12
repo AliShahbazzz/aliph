@@ -18,8 +18,8 @@ export default function Blog(props: { disableCustomTheme?: boolean }) {
         component="main"
         sx={{ display: 'flex', flexDirection: 'column', my: 16, gap: 4 }}
       >
-        <MainContent />
-        <Latest />
+        {/* <MainContent /> */}
+        {/* <Latest /> */}
       </Container>
       <Footer />
     </AppTheme>
