@@ -11,8 +11,9 @@ import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import ColorModeIconDropdown from "../../../shared-theme/ColorModeIconDropdown";
+import ColorModeIconDropdown from "../shared-theme/ColorModeIconDropdown";
 import Sitemark from "./SitemarkIcon";
+import { Link } from "react-router-dom";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
@@ -56,16 +57,24 @@ export default function AppAppBar() {
             <Sitemark />
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               <Button variant="text" color="info" size="small">
-                Home
+                <Link to="/" color="#fffff">
+                  Home
+                </Link>
               </Button>
               <Button variant="text" color="info" size="small">
-                About Us
+                <Link to="/process">Cold Shrink Processing</Link>
               </Button>
               <Button variant="text" color="info" size="small">
-                Contact Us
+                <Link to="/materials">Spiral Materials</Link>
               </Button>
               <Button variant="text" color="info" size="small">
-                Products
+                <Link to="/tube">Cold Shrink Tube</Link>
+              </Button>
+              <Button variant="text" color="info" size="small">
+                <Link to="/about-us">About Us</Link>
+              </Button>
+              <Button variant="text" color="info" size="small">
+                <Link to="/contact-us">Contact Us</Link>
               </Button>
             </Box>
           </Box>

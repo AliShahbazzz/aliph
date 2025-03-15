@@ -1,32 +1,35 @@
 // src/App.jsx
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { Category, Home } from "./pages";
-import Blog from "./pages/blog/Blog";
-import type {} from '@mui/material/themeCssVarsAugmentation';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import type {} from "@mui/material/themeCssVarsAugmentation";
+import AppTheme from "./shared-theme/AppTheme";
+import CssBaseline from "@mui/material/CssBaseline";
+import Container from "@mui/material/Container";
+import { AppAppBar, Footer } from "./components";
+import { Blog, Home, Materials, Process, Tube } from "./pages";
+import "./App.css";
 
 export const App: React.FC = () => {
   return (
     <Router>
-      {/* <div className="p-4">
-        <nav className="flex gap-4">
-          <Link to="/">Home</Link>
-          <Link to="/category1">Category 1</Link>
-          <Link to="/category2">Category 2</Link>
-          <Link to="/category3">Category 3</Link>
-          <Link to="/about">About Us</Link>
-        </nav>
-      </div> */}
-
-      <Routes>
-        <Route path="/" element={<Blog />} />
-        <Route path="/category1" element={<Category name="Category1" />} />
-        <Route path="/category2" element={<Category name="Category2" />} />
-        <Route path="/category3" element={<Category name="Category3" />} />
-        {/* 
-          <Route path="/product/:id" element={<ProductDetails />} />
-          <Route path="/about" element={<About />} /> */}
-      </Routes>
+      <AppTheme>
+        <CssBaseline enableColorScheme />
+        <AppAppBar />
+        <Container
+          maxWidth="lg"
+          component="main"
+          sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/process" element={<Process />} />
+            <Route path="/materials" element={<Materials />} />
+            <Route path="/tube" element={<Tube />} />
+            <Route path="/blog" element={<Blog />} />
+          </Routes>
+        </Container>
+        <Footer />
+      </AppTheme>
     </Router>
   );
 };

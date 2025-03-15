@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Home: React.FC = () => {
+export const Tube: React.FC = () => {
   return (
     <div>
-      <div></div>
+      <div>Tube</div>
     </div>
   );
 };
