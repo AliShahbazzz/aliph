@@ -1,0 +1,56 @@
+{
+  "characteristics": [
+    "Shrink ratio 3:1",
+    "Remain flexible at temperatures as low as -70°C",
+    "Flexible, flame-retardant",
+    "RoHS and REACH compliant"
+  ],
+  "color": "Black",
+  "temperature": {
+    "operating": "-60°C to 90°C",
+    "installation": "-20°C to 50°C"
+  },
+  "technical_data": {
+    "tensile_strength_mpa": {
+      "typical": "≥12.0",
+      "standard": "GB/T 528-1998"
+    },
+    "elongation_at_break_%": {
+      "typical": "≥600",
+      "standard": "GB/T 528-1998"
+    },
+    "shore_a_hardness": {
+      "typical": "50±5",
+      "standard": "GB/T 531.1-2008"
+    },
+    "tear_strength_kn/m": {
+      "typical": "≥38",
+      "standard": "GB/T 529-2008"
+    },
+    "volume_resistivity_ohm_cm": {
+      "typical": "≥7×10^15",
+      "standard": "ASTM D 257-07"
+    },
+    "sealing": {
+      "typical": "IP67",
+      "standard": "IP67"
+    },
+    "ozone_resistant": {
+      "typical": "Temperature 40℃, 50 PPHM, 50 hours",
+      "standard": "DIN53509-2-2001"
+    },
+    "uv_resistance": {
+      "typical": "Temperature 40℃, 1000 Hours",
+      "standard": "IEC60068-2-5-2010"
+    }
+  },
+  "sizes": [
+    { "size": "Φ25-L", "min_mm": 10, "max_mm": 20, "length_mm": "127-350" },
+    { "size": "Φ35-L", "min_mm": 13, "max_mm": 30, "length_mm": "127-400" },
+    { "size": "Φ40-L", "min_mm": 17.5, "max_mm": 33, "length_mm": "127-500" },
+    { "size": "Φ50-L", "min_mm": 25, "max_mm": 45, "length_mm": "152-500" },
+    { "size": "Φ60-L", "min_mm": 25, "max_mm": 53, "length_mm": "152-500" },
+    { "size": "Φ70-L", "min_mm": 32, "max_mm": 63, "length_mm": "152-610" },
+    { "size": "Φ75-L", "min_mm": 43, "max_mm": 64, "length_mm": "152-610" }
+  ]
+}

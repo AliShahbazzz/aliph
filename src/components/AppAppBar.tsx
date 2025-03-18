@@ -61,21 +61,31 @@ export default function AppAppBar() {
                   Home
                 </Link>
               </Button>
-              <Button variant="text" color="info" size="small">
-                <Link to="/process">Cold Shrink Processing</Link>
-              </Button>
-              <Button variant="text" color="info" size="small">
-                <Link to="/materials">Spiral Materials</Link>
-              </Button>
-              <Button variant="text" color="info" size="small">
-                <Link to="/tube">Cold Shrink Tube</Link>
-              </Button>
-              <Button variant="text" color="info" size="small">
-                <Link to="/about-us">About Us</Link>
-              </Button>
-              <Button variant="text" color="info" size="small">
-                <Link to="/contact-us">Contact Us</Link>
-              </Button>
+              <Link to="/process">
+                <Button variant="text" color="info" size="small">
+                  Cold Shrink Processing
+                </Button>
+              </Link>
+              <Link to="/materials">
+                <Button variant="text" color="info" size="small">
+                  Spiral Materials
+                </Button>
+              </Link>
+              <Link to="/tube">
+                <Button variant="text" color="info" size="small">
+                  Cold Shrink Tube
+                </Button>
+              </Link>
+              <Link to="/about-us">
+                <Button variant="text" color="info" size="small">
+                  About Us
+                </Button>
+              </Link>
+              <Link to="/contact-us">
+                <Button variant="text" color="info" size="small">
+                  Contact Us
+                </Button>
+              </Link>
             </Box>
           </Box>
           <Box

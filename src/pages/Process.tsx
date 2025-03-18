@@ -6,8 +6,10 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import { processData } from "../data";
+import { useNavigate } from "react-router-dom";
 
 export const Process: React.FC = () => {
+  const navigate = useNavigate();
   const SyledCard = styled(Card)(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
@@ -44,12 +46,17 @@ export const Process: React.FC = () => {
     textOverflow: "ellipsis",
   });
 
+  const onClickGrid = (id: number) => {
+    navigate(`/product?type=process&id=${id}`);
+  };
+
   return (
     <div>
+      <h2>Cold Shrink Processing</h2>
       <Grid2 container spacing={2} columns={12}>
-        {processData?.map((i) => {
+        {processData?.map((i, index) => {
           return (
-            <Grid2 size={{ xs: 12, md: 4 }}>
+            <Grid2 size={{ xs: 12, md: 4 }} onClick={() => onClickGrid(index)}>
               <SyledCard
                 variant="outlined"
                 // onFocus={() => handleFocus(2)}
@@ -67,7 +74,7 @@ export const Process: React.FC = () => {
                 />
                 <SyledCardContent>
                   <Typography gutterBottom variant="h6" component="div">
-                    {i?.title}
+                    {i?.name}
                   </Typography>
                   <StyledTypography
                     variant="body2"
