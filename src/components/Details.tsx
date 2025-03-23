@@ -32,10 +32,10 @@ export const Details: React.FC = () => {
 // Styles for the component
 const styles = {
   container: {
-    width: "60%",
-    margin: "auto",
+    // width: "60%",
+    // margin: "auto",
     fontFamily: "Arial, sans-serif",
-    padding: "20px",
+    // padding: "20px",
   },
   title: {
     fontSize: "18px",

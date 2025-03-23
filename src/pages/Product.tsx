@@ -54,11 +54,11 @@ export const ProductDetails: React.FC = () => {
         <Grid2 size={6}>
           <h1>{productDetails?.name}</h1>
           <span>{productDetails?.description}</span>
+          <Details />
         </Grid2>
       </Grid2>
       <Grid2>
         <TableComponent />
-        <Details />
       </Grid2>
     </div>
   );
