@@ -67,10 +67,10 @@ export const Tube: React.FC = () => {
                   component="img"
                   alt="green iguana"
                   image={i?.img}
-                  sx={{
-                    height: { sm: "auto", md: "50%" },
-                    aspectRatio: { sm: "16 / 9", md: "" },
-                  }}
+                  // sx={{
+                  //   height: { sm: "auto", md: "50%" },
+                  //   aspectRatio: { sm: "16 / 9", md: "" },
+                  // }}
                 />
                 <SyledCardContent>
                   <Typography gutterBottom variant="h6" component="div">
