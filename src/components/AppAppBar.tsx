@@ -66,11 +66,11 @@ export default function AppAppBar() {
                   Cold Shrink Processing
                 </Button>
               </Link>
-              <Link to="/materials">
+              {/* <Link to="/materials">
                 <Button variant="text" color="info" size="small">
                   Spiral Materials
                 </Button>
-              </Link>
+              </Link> */}
               <Link to="/tube">
                 <Button variant="text" color="info" size="small">
                   Cold Shrink Tube
