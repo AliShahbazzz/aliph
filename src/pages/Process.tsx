@@ -53,7 +53,7 @@ export const Process: React.FC = () => {
   return (
     <div>
       <h2>Cold Shrink Processing</h2>
-      <Grid2 container spacing={2} columns={12}>
+      <Grid2 container spacing={2} columns={16}>
         {processData?.map((i, index) => {
           return (
             <Grid2 size={{ xs: 12, md: 4 }} onClick={() => onClickGrid(index)}>
@@ -67,10 +67,9 @@ export const Process: React.FC = () => {
                   component="img"
                   alt="green iguana"
                   image={i?.img}
-                  // sx={{
-                  //   height: { sm: "auto", md: "50%" },
-                  //   aspectRatio: { sm: "16 / 9", md: "" },
-                  // }}
+                  sx={{
+                    height: 274,
+                  }}
                 />
                 <SyledCardContent>
                   <Typography gutterBottom variant="h6" component="div">

@@ -56,11 +56,11 @@ export default function AppAppBar() {
           >
             <Sitemark />
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <Button variant="text" color="info" size="small">
-                <Link to="/" color="#fffff">
+              <Link to="/">
+                <Button variant="text" color="info" size="small">
                   Home
-                </Link>
-              </Button>
+                </Button>
+              </Link>
               <Link to="/process">
                 <Button variant="text" color="info" size="small">
                   Cold Shrink Processing
@@ -76,11 +76,11 @@ export default function AppAppBar() {
                   Cold Shrink Tube
                 </Button>
               </Link>
-              <Link to="/about-us">
+              {/* <Link to="/about-us">
                 <Button variant="text" color="info" size="small">
                   About Us
                 </Button>
-              </Link>
+              </Link> */}
               <Link to="/contact-us">
                 <Button variant="text" color="info" size="small">
                   Contact Us
