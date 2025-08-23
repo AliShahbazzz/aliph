@@ -13,6 +13,7 @@ import FacebookIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/X";
 import { PNGS } from "../assets";
+import { useNavigate } from "react-router-dom";
 
 function Copyright() {
   return (
@@ -28,6 +29,7 @@ function Copyright() {
 }
 
 export default function Footer() {
+  const navigate = useNavigate();
   return (
     <React.Fragment>
       <Divider />
@@ -58,7 +60,12 @@ export default function Footer() {
             }}
           >
             <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
-              <img src={PNGS.AliphLogo} width={60} />
+              <img
+                src={PNGS.AliphLogo}
+                width={60}
+                onClick={() => navigate("/")}
+                style={{ cursor: "pointer" }}
+              />
               {/* <Typography
                 variant="body2"
                 gutterBottom
@@ -111,12 +118,12 @@ export default function Footer() {
             {/* <Link color="text.secondary" variant="body2" href="#">
               About Us
             </Link> */}
-            <Link color="text.secondary" variant="body2" href="#">
+            <Link color="text.secondary" variant="body2" href="contact-us">
               Contact Us
             </Link>
-            <Link color="text.secondary" variant="body2" href="#">
+            {/* <Link color="text.secondary" variant="body2" href="#">
               Products
-            </Link>
+            </Link> */}
           </Box>
           {/* <Box
             sx={{
@@ -153,9 +160,6 @@ export default function Footer() {
             </Link>
             <Link color="text.secondary" variant="body2" href="#">
               Privacy
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Contact
             </Link>
           </Box>
         </Box>

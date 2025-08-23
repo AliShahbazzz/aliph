@@ -6,7 +6,15 @@ import AppTheme from "./shared-theme/AppTheme";
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import { AppAppBar, Footer } from "./components";
-import { Blog, Home, Materials, Process, Tube, ProductDetails } from "./pages";
+import {
+  Blog,
+  Home,
+  Materials,
+  Process,
+  Tube,
+  ProductDetails,
+  ContactUs,
+} from "./pages";
 import "./App.css";
 
 export const App: React.FC = () => {
@@ -27,6 +35,7 @@ export const App: React.FC = () => {
             <Route path="/tube" element={<Tube />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/product" element={<ProductDetails />} />
+            <Route path="/contact-us" element={<ContactUs />} />
           </Routes>
         </Container>
         <Footer />
