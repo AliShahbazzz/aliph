@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "publish": "aws s3 cp /home/dev/Documents/aliph/dist s3://aliph --recursive && aws cloudfront create-invalidation --distribution-id E23TAN5OBHHNGU --paths \"/*\""
+    "publishAWS": "aws s3 cp /home/dev/Documents/aliph/dist s3://aliph --recursive && aws cloudfront create-invalidation --distribution-id E23TAN5OBHHNGU --paths \"/*\"",
+    "publish": "npm run build && git add . && git commit -m 'Updated UI' && git push"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
