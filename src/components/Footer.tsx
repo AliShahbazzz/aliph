@@ -12,13 +12,13 @@ import Typography from "@mui/material/Typography";
 import FacebookIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/X";
-import SitemarkIcon from "./SitemarkIcon";
+import { PNGS } from "../assets";
 
 function Copyright() {
   return (
     <Typography variant="body2" sx={{ color: "text.secondary", mt: 1 }}>
       {"Copyright © "}
-      <Link color="text.secondary" href="https://aliphmanufacturing.in/">
+      <Link color="text.secondary" href="https://aliphmanufacturing.com/">
         Aliph Manufacturing
       </Link>
       &nbsp;
@@ -58,7 +58,7 @@ export default function Footer() {
             }}
           >
             <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
-              <SitemarkIcon />
+              <img src={PNGS.AliphLogo} width={60} />
               {/* <Typography
                 variant="body2"
                 gutterBottom
