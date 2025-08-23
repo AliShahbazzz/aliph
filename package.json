@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && cp CNAME docs/CNAME",
     "lint": "eslint .",
     "preview": "vite preview",
     "publishAWS": "aws s3 cp /home/dev/Documents/aliph/dist s3://aliph --recursive && aws cloudfront create-invalidation --distribution-id E23TAN5OBHHNGU --paths \"/*\"",
