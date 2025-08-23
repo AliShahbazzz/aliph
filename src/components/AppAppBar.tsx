@@ -135,22 +135,32 @@ export default function AppAppBar() {
                     <CloseRoundedIcon />
                   </IconButton>
                 </Box>
-                <MenuItem>Features</MenuItem>
-                <MenuItem>Testimonials</MenuItem>
-                <MenuItem>Highlights</MenuItem>
-                <MenuItem>Pricing</MenuItem>
-                <MenuItem>FAQ</MenuItem>
-                <MenuItem>Blog</MenuItem>
-                <Divider sx={{ my: 3 }} />
-                <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
-                    Sign up
-                  </Button>
+                <MenuItem component={Link} to="/" onClick={toggleDrawer(false)}>
+                  Home
                 </MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="outlined" fullWidth>
-                    Sign in
-                  </Button>
+                <MenuItem
+                  component={Link}
+                  to="/process"
+                  onClick={toggleDrawer(false)}
+                >
+                  Cold Shrink Processing
+                </MenuItem>
+                {/* <MenuItem component={Link} to="/materials" onClick={toggleDrawer(false)}>
+                  Spiral Materials
+                </MenuItem> */}
+                <MenuItem
+                  component={Link}
+                  to="/tube"
+                  onClick={toggleDrawer(false)}
+                >
+                  Cold Shrink Tube
+                </MenuItem>
+                <MenuItem
+                  component={Link}
+                  to="/contact-us"
+                  onClick={toggleDrawer(false)}
+                >
+                  Contact Us
                 </MenuItem>
               </Box>
             </Drawer>
