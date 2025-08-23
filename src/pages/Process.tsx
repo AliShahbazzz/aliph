@@ -63,14 +63,15 @@ export const Process: React.FC = () => {
                 // onBlur={handleBlur}
                 sx={{ height: "100%" }}
               >
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   alt="green iguana"
                   image={i?.img}
                   sx={{
                     height: 274,
                   }}
-                />
+                /> */}
+                <img src={i?.img} />
                 <SyledCardContent>
                   <Typography gutterBottom variant="h6" component="div">
                     {i?.name}

@@ -1,9 +1,11 @@
 import React from "react";
+import { HomeCarousel } from "../components";
+import { Container } from "@mui/material";
 
 export const Home: React.FC = () => {
   return (
-    <div>
-      <div>Home</div>
-    </div>
+    <Container maxWidth="lg">
+      <HomeCarousel />
+    </Container>
   );
 };

@@ -12,7 +12,7 @@ import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import ColorModeIconDropdown from "../shared-theme/ColorModeIconDropdown";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { PNGS } from "../assets";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
@@ -32,6 +32,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 }));
 
 export default function AppAppBar() {
+  const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -54,7 +55,12 @@ export default function AppAppBar() {
           <Box
             sx={{ flexGrow: 1, display: "flex", alignItems: "center", px: 0 }}
           >
-            <img src={PNGS.AliphLogo} width={60} />
+            <img
+              src={PNGS.AliphLogo}
+              width={60}
+              onClick={() => navigate("/")}
+              style={{ cursor: "pointer" }}
+            />
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               <Link to="/">
                 <Button variant="text" color="info" size="small">
